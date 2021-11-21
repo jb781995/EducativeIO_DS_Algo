@@ -30,6 +30,19 @@ public class Node {
                 n=n.next;
             }
         }
+        
+        /*
+         * overloaded version of the print function in case when 
+         * a Node instance is returned from some function and we 
+         * wish to print based on that instance
+         */
+        public void print() {
+        	Node n = this.head;
+        	 while(n!=null) {
+                 System.out.print(n.data+" ");
+                 n=n.next;
+             }
+        }
 
         public Node getHead(){
             return head;
