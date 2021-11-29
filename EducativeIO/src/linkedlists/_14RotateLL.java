@@ -33,5 +33,7 @@ public static void main(String []a) {
 	rotate=3;
 	rotateLL(head);
 	node.print(head);
+	System.out.println("\n\n**************");
+	
 }
 }

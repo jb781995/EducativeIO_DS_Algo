@@ -34,6 +34,17 @@ public class Node {
         	}
         }
         
+        /*
+         * print based on the next pointer
+         */
+        public void printNext(Node node) {
+        	Node n = node;
+        	while(n!=null) {
+        		System.out.print(n.data+" ");
+        		n=n.next;
+        	}
+        }
+        
 
         public Node getHead(){
             return head;

@@ -59,7 +59,8 @@ public class _9UnionIntersectionLL_2 {
 		node2.print(node2.getHead());
 		o2.head = node2.getHead();
 		
-		System.out.println("\nUnion:");
+		System.out.println("\n****************************************");
+		System.out.println("Union:");
 		System.out.println("****************************************");
 		union(node1, node2).print();
 
