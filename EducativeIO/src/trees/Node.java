@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class Node {
-        Node next, head;
+        Node next, head, prev;
         Node left, right;
 		int data;
         Node(){}
@@ -43,6 +43,25 @@ public class Node {
         		System.out.print(n.data+" ");
         		n=n.next;
         	}
+        }
+        
+        /*
+         * print based on the next pointer and prev pointer
+         * for doubly linked list behavior
+         */
+        public void printNextPrev(Node node) {
+        	Node n = node;
+        	while(n!=null && n.next!=null) {
+        		if(n.prev==null) {
+        			System.out.println(n.data+" -> "+n.next.data);
+        			n=n.next;
+        			continue;
+        		}
+        			
+        		System.out.println(n.prev.data+" <- "+n.data+" -> "+n.next.data);
+        		n=n.next;
+        	}
+        	System.out.println(n.prev.data+" <- "+n.data);
         }
         
 
