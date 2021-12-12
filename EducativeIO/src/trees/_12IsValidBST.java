@@ -27,7 +27,11 @@ public class _12IsValidBST {
 		Node fifty_1 = new Node(50, twentyfive_1, null);	
 	    Node hundred_1 = new Node(100, fifty_1, twohundred_1);
 	    
-	    System.out.println("is valid? "+isValidBST(hundred_1));
+	    //System.out.println("is valid? "+isValidBST(hundred_1));
+	    
+	    int xx = Integer.MIN_VALUE;
+	    xx--;
+	    System.out.println(xx);
 
 	}
 
