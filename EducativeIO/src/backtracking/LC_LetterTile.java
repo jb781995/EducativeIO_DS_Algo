@@ -14,6 +14,7 @@ public class LC_LetterTile {
 		boolean [] visited = new boolean[str.length()];
 		Arrays.fill(visited, false);
 		backtrack(str, "", visited, unique);
+		System.out.println("\n\n"+unique);
 		return unique.size()-1;
 		
 		}

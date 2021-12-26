@@ -10,7 +10,8 @@ import java.util.Queue;
  * https://www.educative.io/module/lesson/data-structures-in-java/7Alwgw73m0r
  */
 public class _18NthHighestNumberBST {
-	
+	private static int n = 0;
+	private static int nthHighestVal=0;
 public void nthHighestNumber(Node node, int n) {
 	Queue<Node> queue = new LinkedList<>();
 	PriorityQueue<Integer> sortedQueue = new PriorityQueue<>(new Comparator<Integer> (){
@@ -49,6 +50,22 @@ public void nthHighestNumber(Node node, int n) {
 	}
 	
 }
+
+public int nthHighestNumber2(Node node, int nth) {
+	if(node==null)
+		return nth;
+	 nth=nthHighestNumber2(node.right, nth);
+	 nth++;
+	 if(nth==n) {
+			
+			nthHighestVal = node.data;
+			System.out.println("     found it "+nthHighestVal);
+		}
+	System.out.println(nth+" ");
+     nth=nthHighestNumber2(node.left, nth);
+	
+	return nth;
+}
 	public static void main(String[] args) {
 		Node threehundred_1=  new Node(300, null, null);
 		Node onetwentyfive_1 = new Node(125, null, null);
@@ -59,7 +76,10 @@ public void nthHighestNumber(Node node, int n) {
 		Node fifty_1 = new Node(50, twentyfive_1, seventyfive_1);	
 	    Node hundred_1 = new Node(100, fifty_1, twohundred_1);
 	    
-	    new _18NthHighestNumberBST().nthHighestNumber(hundred_1, 5);
+	    n = 2;
+	    new _18NthHighestNumberBST().nthHighestNumber(hundred_1, n);
+	    new _18NthHighestNumberBST().nthHighestNumber2(hundred_1, 0);
+	    System.out.println("\n\n\nresult: "+nthHighestVal);
 
 	}
 
