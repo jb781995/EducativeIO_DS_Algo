@@ -68,5 +68,10 @@ public class Node {
         public Node getHead(){
             return head;
         }
+        
+        @Override 
+        public String toString() {
+        	return " "+this.data+" ";
+        }
 
 }

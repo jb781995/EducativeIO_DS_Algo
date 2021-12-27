@@ -56,7 +56,20 @@ public class _GK_ZigZagTraversal {
 	    
 	    System.out.println("\n\n");
 	    new _GK_ZigZagTraversal().zigZag(hundred_1);
-
+	    
+	    StringBuffer sb = new StringBuffer();
+	    sb.append("b");
+	    String.valueOf(sb);
+	    int n=55;
+	    System.out.println("\n\n\n"+String.valueOf(n));
+	    
+	    List<String> bf = new ArrayList<String>();
+	    bf.add("j");
+	    bf.add("b");
+	    
+	    StringBuffer finalBF = new StringBuffer();
+	    finalBF.append(bf);
+	    System.out.println("\n\n"+finalBF);
 	}
 
 }
