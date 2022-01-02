@@ -31,6 +31,7 @@ public void backtrack(Node node, int sumUntilNow) {
 	
 }
 
+
 public int sumPaths(Node node, int sumUntilNow) {
 	if(node==null)
 		return sumUntilNow;
@@ -44,6 +45,8 @@ public int sumPaths(Node node, int sumUntilNow) {
 	sumPaths.removeLast();
 	return sumUntilNow;
 }
+
+
 	public static void main(String[] args) {
 		Node seven_2 = new Node(7, null, null);
 		Node two = new Node(2, null, null);

@@ -51,7 +51,8 @@ public class _4ArrProdExceptItself {
 	public static void main(String[] args) {
 		int [] arr = {1, 2, 3, 4};
 		int [] arr2 = {5, 6, 7, 8};
-		System.out.println("result: "+Arrays.toString(findProduct(arr2)));
+		int [] arr3 = {-1, 2, -3, 4, -5};
+		System.out.println("result: "+Arrays.toString(findProduct(arr)));
 	}
 
 }
