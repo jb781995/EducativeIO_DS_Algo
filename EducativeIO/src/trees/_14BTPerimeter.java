@@ -65,6 +65,25 @@ public class _14BTPerimeter {
 	    
 	    System.out.println("tree perimeter:\n"+displayTree(hundred_1));
 
+	    /*
+	     * while(node!=null){
+	     *  if(node.left!=null)
+	     *   node = node.left;
+	     *  else if(node.right!=null)
+	     *  node= node.right;
+	     *  else 
+	     *  break;
+	     * }
+	     * 
+	     * leaf(Node node){
+	     * if(node!=null){
+	     *  leaf(node.left);
+	     *  leaf(node.right);
+	     *  if(node.left==null && node.right==null)
+	     *    sb.append(node.data)
+	     * }
+	     * }
+	     */
 	}
 
 }

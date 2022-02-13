@@ -15,6 +15,7 @@ public void songPairs(int [] trackLength) {
 			count+= remainders[0];
 		else {
 			count+=remainders[60-trackLength[i]%60];
+			System.out.println("track length: "+trackLength[i]+", count: "+count);
 		}
 		remainders[trackLength[i]%60]++;
 	}

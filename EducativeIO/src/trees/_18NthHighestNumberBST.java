@@ -57,7 +57,6 @@ public int nthHighestNumber2(Node node, int nth) {
 	 nth=nthHighestNumber2(node.right, nth);
 	 nth++;
 	 if(nth==n) {
-			
 			nthHighestVal = node.data;
 			System.out.println("     found it "+nthHighestVal);
 		}

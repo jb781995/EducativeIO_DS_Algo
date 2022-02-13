@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class _LC_NFLTeams {
+	
 	public String findContestMatch(int n) { 
         if(n<2)
             return String.valueOf(n);

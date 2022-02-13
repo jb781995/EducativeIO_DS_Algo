@@ -31,6 +31,23 @@ public class _13BSTToDLL {
 	    
 	    treeToDLL(hundred_1);
 	    new Node().printNextPrev(head);
+	    /*
+	     * helper(Node node){
+	     * if(node == null)
+	     *  return;
+	     *  helper(node.left);
+	     *  
+	     *  if(prev==null)
+	     *   head= node;
+	     *   else{
+	     *    prev.next = node;
+	     *    node.prev = prev;
+	     *   }
+	     *   prev= node;
+	     *   
+	     *   helper(node.right);
+	     * }
+	     */
 
 	}
 

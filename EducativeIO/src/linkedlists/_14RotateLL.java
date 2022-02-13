@@ -29,6 +29,7 @@ public static void main(String []a) {
 	node.insert(3);
 	node.insert(4);
 	node.insert(5);
+	System.out.println("ll size: "+node.getCount());
 	head = node.head;
 	rotate=3;
 	rotateLL(head);

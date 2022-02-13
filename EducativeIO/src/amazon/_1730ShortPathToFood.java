@@ -24,11 +24,7 @@ public class _1730ShortPathToFood {
                     c = j;
                     break;
                 }
-        
-        for(int i=1;i<this.rowNum;i++)
-        	for(int j=1;j<this.colNum;j++)
-        		
-        
+  
         System.out.println("start point at:["+r+", "+c+"]");
         backtrack(r, c, 0);
         
@@ -36,6 +32,7 @@ public class _1730ShortPathToFood {
         
     }
     
+   // int counter is # steps walked so far to reach this cell i.e row, col
     public void backtrack(int row, int col, int counter){
         if(this.board[row][col]=='0'){
         	//this.board[row][col] = 'X';
@@ -68,8 +65,12 @@ public class _1730ShortPathToFood {
 		char[][] grid = {
 				{'X','X', 'X', 'X'},
 				{'X', '*', '0', 'X'},
+				{'#', '0', '0', '#'},
 				{'X', '0', '0', 'X'},
-				{'X', '#', '0', 'X'}
+				{'X', '0', '0', 'X'},
+				{'X', '#', '0', 'X'},
+				{'X', '0', '0', 'X'}
+				
 		};
 
 		System.out.println("min steps to get food:\n"+new _1730ShortPathToFood().getFood(grid));

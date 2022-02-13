@@ -35,14 +35,35 @@ public class _3DeleteFromSLL {
 	
 	public void delete(int data) {
 		Node n = head;
-		while(n.next!=null) {
-			if(n.next.data==data) {
-				Node newNext = n.next.next;
-				n.next = newNext;
-				break;
+		Node prev = null;
+		if(n.data==data) {
+			head = deleteAtHead(data, head);
+			return;
+		}
+		// this is also correct, but let's use a better approach
+//		while(n.next!=null) {
+//			if(n.next.data==data) {
+//				Node newNext = n.next.next;
+//				n.next = newNext;
+//				break;
+//			}
+//			n=n.next;
+//		}
+		
+		while(n!=null) {
+			if(n.data==data) {
+				prev.next = n.next;
+				return;
 			}
+			prev =n;
 			n=n.next;
 		}
+		
+	}
+	public Node deleteAtHead(int data, Node head) {
+		Node newHead = head.next;
+		head = newHead;
+		return head;
 	}
 	public static void main(String[] args) {
 		_3DeleteFromSLL o = new _3DeleteFromSLL();
@@ -54,7 +75,7 @@ public class _3DeleteFromSLL {
 		o.delete(15);
 		System.out.println();
 		o.print(o.head);
-		o.delete(35);
+		o.delete(5);
 		System.out.println();
 		o.print(o.head);
 		

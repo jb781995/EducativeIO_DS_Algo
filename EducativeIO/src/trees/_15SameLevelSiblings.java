@@ -66,6 +66,24 @@ public class _15SameLevelSiblings {
 	    Node hundred_1 = new Node(100, fifty_1, twohundred_1);
 	    
 	    levelOrder(hundred_1);
+	    
+	    /*
+	     * while(!q.isEmpty()){
+	     *  int size = q.size();
+	     *  Node prev=null;
+	     *  for(int i=0;i<size;i++){
+	     *   Node currentNode = q.poll();
+	     *   if(prev!=null)
+	     *    prev.next = currentNode;
+	     *   prev= currentNode;
+	     *   
+	     *   if(currentNode.left!=null)
+	     *    q.add(currentNode.left);
+	     *    if(currentNode.right!=null)
+	     *     q.add(currentNode.right);
+	     *  }
+	     * }
+	     */
 
 	}
 

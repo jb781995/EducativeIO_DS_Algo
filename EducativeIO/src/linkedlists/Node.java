@@ -3,6 +3,7 @@ package linkedlists;
 public class Node {
         Node next, head;
 		int data;
+		int count=0;
         Node(){}
 		Node(int data){
 			this.data = data;
@@ -10,6 +11,7 @@ public class Node {
 		}
 
         public void insert(int data) {
+        	count++;
             if(head==null) {
                 head = new Node(data);
                 return;
@@ -42,6 +44,10 @@ public class Node {
                  System.out.print(n.data+" ");
                  n=n.next;
              }
+        }
+        
+        public int getCount() {
+        	return this.count;
         }
 
         public Node getHead(){

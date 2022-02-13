@@ -31,12 +31,24 @@ public class _6PalindromicSubstrings {
 	 * approach-2: n^2 solution
 	 */
 	public static int palindromicSSOptimized(String s) {
-		int count=0;
+		int start=0, end=0;
+		int c1=0, c2=0;
+		int max=0;
+		String result= "";
 		for(int i=0;i<s.length();i++) {
-			count+= isPalindromOptimized(s, i, i+1);// odd length palindromes
-			count+= isPalindromOptimized(s, i-1,i+1);// even length palindromes
+			c1= isPalindromOptimized(s, i, i+1);// odd length palindromes
+			c2= isPalindromOptimized(s, i-1,i+1);// even length palindromes
+			int len = Math.max(c1, c2);
+			if(len >(end-start)) {
+				start = i - (len-1)/2;
+				end = i + len/2;
+				max= len;
+			}
+			
 		}
-		return count;
+		result = s.substring(start, end);
+		System.out.println("longest palindromic substring: "+result);
+		return max;
 	}
 	public static int isPalindromOptimized(String s, int j, int k) {
 		int count=0;
@@ -50,14 +62,15 @@ public class _6PalindromicSubstrings {
 			else
 				break;
 		}
-		return count;
+		return k;
 	}
 	public static void main(String[] args) {
 		String str = "aabbbaa";
-		int count1 = palindromicSS(str);
+		String str2= "abacab";
+		//int count1 = palindromicSS(str);
 		System.out.println("------------------------------------------------");
-		int count2 = palindromicSSOptimized(str);
-		System.out.println("approach-1: "+count1+"\napproach-2: "+count2);
+		int count2 = palindromicSSOptimized(str2);
+		//System.out.println("approach-1: "+count1+"\napproach-2: "+count2);
 
 	}
 

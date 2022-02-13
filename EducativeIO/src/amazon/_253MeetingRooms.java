@@ -26,12 +26,13 @@ public class _253MeetingRooms {
 
 	 @Override
 	 public int compare(Times start, Times end) {
-		 if(start.getStart()>end.getEnd())
-			 return 1;
-		 else if(start.getStart()<end.getEnd())
-			 return -1;
-		 else
-			 return 0;
+//		 if(start.getStart()>end.getEnd())
+//			 return 1;
+//		 else if(start.getStart()<end.getEnd())
+//			 return -1;
+//		 else
+//			 return 0;
+		 return start.getStart()-end.getEnd();
 	 }
 	 
 	 @Override
@@ -46,15 +47,13 @@ public class _253MeetingRooms {
 	 
 	 for(int i=0;i<time.length;i++) {
 		 queue.add(new Times(time[i][0], time[i][1]));
-		 System.out.println(queue.peek());
+		 //System.out.println(queue.peek());
 	 }
 	 
 	 List<Times> times  = new ArrayList<>();
-	 while(!queue.isEmpty()) {
-		 //System.out.println(queue.poll());
-		 times.add(queue.poll());
-		 System.out.println(times);
-	 }
+	 for(Times t: queue)
+		 System.out.println(t);
+	 
 	 System.out.println("\n\n"+times+"\n\n");
 	 //int rooms =time.length>0?1:0;
 	 int rooms=0;
